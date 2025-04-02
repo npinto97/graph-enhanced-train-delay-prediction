@@ -1,18 +1,7 @@
-# *Predicting Train Delays Using Machine Learning and Knowledge Graphs*  
+# Project Overview
 
-### **Project Description**  
-This project aims to develop a **train delay prediction model** using a combination of **Machine Learning, Deep Learning, and Knowledge Graphs**. Train delays are influenced by various factors, including **historical delays, weather conditions, network congestion, and operational constraints**. Capturing these complex dependencies requires a structured, multi-step approach.  
+Train delays are the result of a complex interplay between multiple factors, evolving in nonlinear and often unpredictable ways. While delays at one station can propagate to subsequent stops, their spread is influenced by elements such as weather conditions, network congestion, and unexpected events like strikes or technical failures. Moreover, these disruptions do not remain confined to a single railway line but can cascade across the entire network, amplifying scheduling issues on a broader scale.
 
-The project follows an **experimental methodology**, where each step builds upon the previous one to progressively improve predictive accuracy. The main challenges addressed are:  
+This project does not primarily aim to develop the best predictive model for train delays. Instead, it focuses on evaluating how the integration of topological information - derived from railway network structure - impacts predictive performance. Traditional machine learning models rely on historical and tabular data, but this study explores whether incorporating graph-based features improves their accuracy. By comparing baseline models with those enhanced through feature engineering and network-aware methodologies, we aim to assess the contribution of structural properties to delay prediction. Additionally, the study extends to sequential modeling with LSTMs to investigate how different feature sets influence time-series forecasting.
 
-1. **Temporal Dependency of Delays** – A train’s delay at a given station is influenced by previous delays along the route. **Recurrent Neural Networks (LSTM, GRU)** will be used to model these sequential dependencies.  
-
-2. **Non-Linear Relationships Between Variables** – External factors (e.g., weather, time of day) interact with operational constraints in complex ways. **Ensemble models (Random Forest, XGBoost, SVR)** will be employed to capture these interactions.  
-
-3. **Propagation of Delays Across the Railway Network** – Delays do not only propagate sequentially but also affect interconnected routes. A **Knowledge Graph** will be built to represent stations as nodes and train routes as edges, enriching the predictive model with structural insights.  
-
-4. **Uncertainty in Predictions** – Given the stochastic nature of delays, **Bayesian Regression and Hidden Markov Models** will be used to quantify uncertainty, providing a confidence interval for each prediction.  
-
-The project will progress through multiple phases, starting with **baseline regression models**, followed by the integration of **temporal modeling, graph-based representation, and probabilistic methods**. The ultimate goal is to **evaluate which combination of techniques yields the most accurate and reliable delay predictions**.  
-
-This approach is not just about testing different methods but also about demonstrating **a broad understanding of Machine Learning techniques**, covering various topics studied during the course.  
+Several challenges arise in this analysis. The first is the inherent nonlinearity and interdependence of factors affecting train delays, which require models capable of capturing complex interactions. Another key challenge is modeling the propagation of delays across interconnected railway lines, necessitating the use of network-aware approaches. Finally, incorporating temporal dependencies is crucial, as delays evolve dynamically over time, demanding methods that can effectively learn sequential patterns.
